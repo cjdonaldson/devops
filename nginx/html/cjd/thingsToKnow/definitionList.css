@@ -1,0 +1,14 @@
+dl {
+  padding-left: 2em;
+  max-width: 50%;
+}
+ol {
+  padding-left: 2em;
+  max-width: 50%;
+}
+dt:first-of-type {
+  padding-top: 0;
+}
+dt {
+  padding-top: 1em;
+}

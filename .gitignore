@@ -1,0 +1,4 @@
+/git-server-docker/keys/
+/git-server-docker/repos/
+/jenkins-docker/jenkins_home/
+/mysql/db-data

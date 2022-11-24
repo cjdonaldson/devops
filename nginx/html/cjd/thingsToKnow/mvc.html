@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Model View Controller</title>
+    <link rel="stylesheet" href="definitionList.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <ol>
+          <dt>Model</dt>
+          <dd>Represents the data.</dd>
+          <dd>Maintains data consistency.</dd>
+          <dd>implements logic and rules - Business logic</dd>
+          <dd>Publishes change events for Viewers to subscribe to.</dd>
+
+          <dt>View</dt>
+          <dd>Presents the data.</dd>
+          <dd>
+            <span>multiple views - one view doing everything is a bad implementation</span>
+            <ul>
+              <li>web pages</li>
+              <li>web services (API)</li>
+            </ul>
+          </dd>
+          <dd>UI - graphs, charts, diagrams. Possibly multiple views of the same data</dd>
+          <dd>Subscribes to Model change events.</dd>
+          <dd>Requests model changes.</dd>
+          <dd>Requests model data.</dd>
+
+          <dt>Controller</dt>
+          <dd>Services requests from User.</dd>
+          <dd>Services requests from View.</dd>
+          <dd>Conditions and proxies requests to / from View and Model</dd>
+        </ol>
+      </section>
+      <section>
+          <p>Originally developed as a solution to a problem on desktop applications.</p>
+          <p>Adapted and applied to web applications.</p>
+      </section>
+      <section>
+
+        <ol>
+          <dt>Push (Action) based</dt>
+          <dd>Using actions to push data to the view layer
+            <ul>
+              <li>Django</li>
+              <li>Ruby on Rails</li>
+              <li>Spring MVC</li>
+              <li>Play</li>
+              <li>Struts</li>
+            </ul>
+          </dd>
+
+          <dt>Pull (Component) based</dt>
+          <dd>
+            <span>View layer pulls results from multiple controllers.</span>
+            <ul>
+              <li>Lift</li>
+              <li>JavaServer Faces</li>
+              <li>Wicket</li>
+              <li>Play</li>
+              <li>Struts</li>
+            </ul>
+          </dd>
+
+          <dt>Pub/Sub based ???</dt>
+          <dd></dd>
+        </ol>
+      </section>
+      <section>
+        <dt>Front-End</dt>
+        <dd>The web browser and its language - HTML, CSS, JavaScript.</dd>
+      </section>
+    </article>
+  </body>
+
+</html>

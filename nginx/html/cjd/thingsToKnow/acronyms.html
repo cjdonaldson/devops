@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Acronyms to know</title>
+    <link rel="stylesheet" href="definitionList.css">
+  </head>
+  <body>
+    <p>Acronyms to know</p>
+    <article>
+      <h1>ACID</h1>
+      <ol>
+        <dt>Atomicity</dt>
+        <dd>The unit - a sequence of transactions - all succeed or all fail.</dd>
+
+        <dt>Consistency</dt>
+        <dd>The database is moved from one state to the next observing all defined rules: constraints, triggers, etc.</dd>
+
+        <dt>Isolation</dt>
+        <dd>Concurrent units - sequences of transactions - are executed in isolation from each other such that a failing unit is not observable (intermediate states) from other units.</dd>
+
+        <dt>Durability</dt>
+        <dd>a committed transaction - a unit of sequences - will persist over a system restart.</dd>
+      </ol>
+    </article>
+    <article>
+      <h1>KISS - Keep It Simple, Stupid</h1>
+    </article>
+    <article>
+      <h1>DRY - Don’t Repeat Yourself</h1>
+    </article>
+    <article>
+      <h1>YAGNI - You Aren’t Gonna Need It</h1>
+    </article>
+    <article>
+      <h1>Law of Demeter (LoD), Principle of Least Knowldege, Principle of Least Privilege, Loose Coupling</h1>
+    </article>
+    <article>
+      <h1>DRITW - Don't Re-Invent The Wheel</h1>
+    </article>
+    <article>
+      <h1>Kaizen - leave it better than when you found it</h1>
+    </article>
+    <article>
+      <h1>Domain-Driven Design</h1>
+    </article>
+    <article>
+      <h1>Test-driven development (TDD)</h1>
+    </article>
+    <article>
+      <h1>Behaviour Driven Development (BDD)</h1>
+    </article>
+    <article>
+      <h1>Acceptance Test Driven Development (ATDD)</h1>
+    </article>
+    <article>
+      <h1>SOLID</h1>
+      <ol>
+        <dt>Single Responsibility Principle (SRP)</dt>
+        <dd>An object should have one reason to exist. One reason to change. One primary responsibility.</dd>
+
+        <dt>Open/Closed Principle</dt>
+        <dd>Open for extension (inheritance) but closed for modification (no new fields or methods).</dd>
+        
+        <dt>Liskov Substitution Principle</dt>
+        <dd>Derived classes must be substitutable with their base classes without altering the correctness of the program.</dd>
+        <dd>Design by contract - interfaces</dd>
+        
+        <dt>Interface Segregation Principle (ISP)</dt>
+        <dd>Multiple specific interfaces are better than one general purpose one.</dd>
+        <dd>Program to interfaces.</dd>
+
+        <dt>Depend Inversion Principle (DIP)</dt>
+        <dd>
+          <span>Depend On Abstractions Not Concretes</span>
+          <ul>
+            <li>Decoupling.</li>
+            <li>Use interfaces to avoid dependency on implementation details.</li>
+          </ul>
+        </dd>
+    </article>
+    <article>
+      <h1>MEAN stack</h1>
+      <ol>
+        <dt>MongoDb</dt>
+        <dd>a NoSQL database.</dd>
+
+        <dt>Express</dt>
+        <dd>a web application framework that runs on Node.js.</dd>
+
+        <dt>Angular</dt>
+        <dd>A JavaScript MVC frameworks that run in browser JavaScript engines.</dd>
+
+        <dt>Node.Js</dt>
+        <dd>an execution environment for event-driven server-side and networking applications.</dd>
+
+      </ol>
+    </article>
+    <article>
+      <h1>Testing Trophy - (from Kent C. Dodds)</h1>
+      <a href="https://kentcdodds.com/blog/write-tests">Write tests. Not too many. Mostly integration. Kent's talk</a>
+      <br/>
+      <a href="https://testingjavascript.com/">Learn the smart, efficient way to test any JavaScript application. Kent's talk</a>
+      <br/>
+      <!-- <img src="../images/test-trophy.jpeg"/> -->
+      <img src="../images/testing-trophy.png"/>
+      <ol>
+        <dt>End-to-End testing</dt>
+        <dd>full system interaction, workflows</dd>
+        <dd>highest confidence</dd>
+        <dd>slowest execution</dd>
+        <dd>workflows</dd>
+        <dd>medium to low test count</dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+
+        <dt>Integration tests - business logic</dt>
+        <dd>parts of the application, exercising business logic</dd>
+        <dd>medium confidence</dd>
+        <dd>slower execution</dd>
+        <dd>business logic and fragments of workflows</dd>
+        <dd>highest test count</dd>
+        <dd>Cypress.io</dd>
+        <dd></dd>
+        <dd></dd>
+        <dd></dd>
+
+        <dt>unit tests</dt>
+        <dd>low confidence</dd>
+        <dd>fastest execution</dd>
+        <dd>functional testing</dd>
+        <dd>medium test count</dd>
+        <dd>Jest</dd>
+        <dd>do not expose or factor out private methods just to test
+          <ul>
+            <li>do NOT test implementation - refactoring will break tests - though it may identify stimulus / response domain</li>
+            <li>do test I/O validation</li>
+          </ul>
+        </dd>
+        <dd></dd>
+
+        <dt>static tests - compiler checks</dt>
+        <dd>no confidence</dd>
+        <dd>compile time execution speed</dd>
+        <dd>no explicit tests</dd>
+        <dd>compiler and linter flags</dd>
+        <dd>TypeScript</dd>
+        <dd></dd>
+
+      </ol>
+    </article>
+    <article>
+      <h1>12 Factor App</h1>
+    </article>
+    <article>
+      <h1>BASE - Basically Available, Soft state, Eventual consistency</h1>
+    </article>
+    <article>
+      <h1>CRUD - Create Read Update Delete (Pattern)</h1>
+    </article>
+    <article>
+      <h1>CQRS -  Command Query Responsibility Segregation (Pattern)</h1>
+      <a href="https://martinfowler.com/bliki/CQRS.html">Martin Folwer</a>
+      <ul>
+          <li>Use a different model to write vs read.</li>
+          <li>Adds risky compexity.</li>
+          <li>Multiple layers of representation can be complicated.</li>
+          <li>Split that conceptual model into separate models for update(command) and display(query).</li>
+          <li>Split may occur due to a unified conceptual model not performing either process well.</li>
+          <li>Split may occur due to overly complicated.</li>
+          <li>Use case needs careful and serious consideration - do your research</li>
+      </ul>
+    </article>
+    <article>
+      <h1>Flynn's Taxonomy - Parallel processing</h1>
+      <p>Four quadrants for Number of Instrunction Streams and Number of Data Streams</p>
+      <ul>
+          <li>SISD - Single Instruction, Single data Stream</li>
+          <li>SIMD - Single Istruction, Multiple data streams</li>
+          <li>MISD - Multiple Istruction, Single data streams</li>
+          <li>MIMD - Multiple Istruction, Multiple data streams</li>
+          <p>MIMD is furhter divided</p>
+          <ul>
+              <li>SPMD - Single Program, Multiple Data</li>
+              <li>MPMD - Multiple Program, Multiple Data</li>
+          </ul>
+      </ul>
+      <p>Concurrency is the ability to subdivide program into independant task that can complete independant of each other; dealing with vs doing multiple things at once</p>
+    </article>
+  </body>
+</html>

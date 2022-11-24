@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  postgres:
+    image: docker.io/postgres:15.1
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRESL_DATABASE: 'db'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'password'
+      POSTGRES_ROOT_PASSWORD: 'password'
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+    volumes:
+      - ./db-data:/var/lib/postgresql/data 
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+    networks:
+      - dodropin_net
+      #  aliases:
+      #    - postgres
+
+networks:
+  dodropin_net:
+    external: true
+
+# Names our volume
+#volumes:
+#  my-db:

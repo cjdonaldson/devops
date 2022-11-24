@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  redis:
+    image: docker.io/redis:alpine
+    container_name: redis
+    command: redis-server --requirepass ${REDIS_PASS:-password}
+    restart: always
+    ports:
+      - '6379:6379'
+    expose:
+      - '6379'
+    volumes:
+      - db-data:/data
+      #- redis-conf:/usr/local/etc/redis/redis.conf
+    deploy:
+      resources:
+        limits:
+          memory: 1000M
+    networks:
+      - dodropin_net
+
+networks:
+  dodropin_net:
+    external: true
